@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Weather Dashboard</title>
+	<link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+	<!-- header	 -->
+	<header>
+   	<h1>Weather Dashboard</h1>
+   </header>
+	
+	<main class="layout">
+		<aside class="sidebar">
+			<h2>Search for a City:</h2>
+			<form>
+				<input class="display" id="city" type="text" />
+				<button class="search" id="searchButton" type="submit">SEARCH</button>
+			</form>
+			
+			<div>
+				<button class="search">MIAMI</button>	
+				<button class="search">NEW YORK</button>
+				<button class="search">SEATTLE</button>
+				<button class="search">SAN FRANCISCO</button>
+			</div>
+		</aside>
+
+		<div class="content">
+			<div class="about">
+				<h2>Current Weather In:</h2>
+				<div id="currentCity"></div>
+				<div id="currentDate"></div>
+				<div id="currentTemp">Temp:</div>
+				<div id="currentWind">Wind:</div>
+				<div id="currentHumidity">Humidity:</div>
+				<div id="currentUv">UV Index:</div>
+			</div>
+		
+			<div class="about">
+				<h2>5-Day Forecast:</h2>
+			</div>
+		</div>
+	
+	
+	</main>
+	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+	<script src="main.js"></script>
+</body>
+
+</html>
