@@ -1,7 +1,5 @@
 var searchBtn = $('#searchButton');
 
-var ApiKey = "fd204250ad9bd57472575028dbb9584d";
-
 var city = $('#city');
 
 var currentDateEl = $('#currentDate');
@@ -25,7 +23,7 @@ function displayDate() {
 
 
 function cityWeather(UserCity) {
-	var requestUrl = "https://api.openweathermap.org/data/2.5/weather?q=" + UserCity + "&appid=" + ApiKey;
+	var requestUrl = "https://api.openweathermap.org/data/2.5/weather?q=" + UserCity + "&appid=c58ae0ce4d9dbca902abb9fdf5ec7069"
 
 	fetch(requestUrl)
 		.then(function (response) {

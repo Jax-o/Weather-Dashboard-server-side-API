@@ -15,20 +15,14 @@
    </header>
 	
 	<main class="layout">
-		<aside class="sidebar">
+		<div class="sidebar">
 			<h2>Search for a City:</h2>
 			<form>
 				<input class="display" id="city" type="text" />
 				<button class="search" id="searchButton" type="submit">SEARCH</button>
 			</form>
-			
-			<div>
-				<button class="search">MIAMI</button>	
-				<button class="search">NEW YORK</button>
-				<button class="search">SEATTLE</button>
-				<button class="search">SAN FRANCISCO</button>
-			</div>
-		</aside>
+		</div>
+		
 
 		<div class="content">
 			<div class="about">
@@ -40,9 +34,51 @@
 				<div id="currentHumidity">Humidity:</div>
 				<div id="currentUv">UV Index:</div>
 			</div>
+		</div>
 		
-			<div class="about">
+
+		<div class="sidebar">
+			<button class="search">MIAMI</button>	
+			<button class="search">NEW YORK</button>
+			<button class="search">SEATTLE</button>
+			<button class="search">SAN FRANCISCO</button>
+		</div>	
+			
+		<div class="content">
+			<div class="forecast">
 				<h2>5-Day Forecast:</h2>
+				<div class="clearfix">
+					<div class="cards">
+						<div id="dayOne">Day One</div>
+						<div id="tempOne">Temp:</div>
+						<div id="windOne">Wind:</div>
+						<div id="humidityOne">Humidity:</div>
+					</div>
+					<div class="cards">
+						<div id="dayTwo">Day Two</div>
+						<div id="tempTwo">Temp:</div>
+						<div id="windTwo">Wind:</div>
+						<div id="humidityTwo">Humidity:</div>
+					</div>
+					<div class="cards">
+						<div id="dayThree">Day Three</div>
+						<div id="tempThree">Temp:</div>
+						<div id="windThree">Wind:</div>
+						<div id="humidityThree">Humidity:</div>
+					</div>
+					<div class="cards">
+						<div id="dayFour">Day Four</div>
+						<div id="tempFour">Temp:</div>
+						<div id="windFour">Wind:</div>
+						<div id="humidityFour">Humidity:</div>
+					</div>
+					<div class="cards">
+						<div id="dayFive">Day Five</div>
+						<div id="tempFive">Temp:</div>
+						<div id="windFive">Wind:</div>
+						<div id="humidityFive">Humidity:</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	
