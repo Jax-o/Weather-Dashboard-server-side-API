@@ -1,10 +1,15 @@
 var searchBtn = $('#searchButton');
 
+var sideBtn = $(".sideButtons");
+
 var city = $('#city');
 
 var currentDateEl = $('#currentDate');
 
+
 searchBtn.on('click', getInfo);
+
+// sideBtn.on('click', displayHistory);
 
 function getInfo(event) {
 	event.preventDefault();
@@ -13,8 +18,21 @@ function getInfo(event) {
 	forecast(UserCity);
 	displayDate();
 	displayFutureDate();
+	displaySearchBtn(UserCity);
 
 }
+
+
+function displaySearchBtn(UserCity) {
+	sideBtn.append('<button>' + UserCity + '</button>');
+	
+}
+
+// working on displaying search history
+// function displayHistory(UserCity) {
+// 	cityWeather(UserCity);
+// 	forecast(UserCity);
+// }
 
 function displayDate() {
 	var rightNow = moment().format('MMM Do YYYY');
@@ -88,12 +106,13 @@ var requestUrl = "https://api.openweathermap.org/data/2.5/onecall?lat="+ lat + "
 function displayInfo (name, temp, speed, humidity) {
 	$("#currentCity").text(name);
 	var convertedTemp = Math.round((temp-273.25) * 9/5 + 32)
-	$("#currentTemp").text(convertedTemp + '°' + 'F' + ' Current temperature');
-	$("#currentWind").text(speed + ' MPH' + ' Current wind speed');
-	$("#currentHumidity").text(humidity + '%' + ' Current humidity');
+	$("#currentTemp").text(convertedTemp + '°' + 'F' + ' temperature');
+	$("#currentWind").text(speed + ' MPH' + ' wind speed');
+	$("#currentHumidity").text(humidity + '%' + ' humidity');
 
 }
 function displayFutureOne (temp, speed, humidity) {
+	$(".cards").css("border", "2px solid green");
 	var convertedFutureTemp = Math.round((temp-273.15) * 9/5 + 32)
 	$("#tempOne").text(convertedFutureTemp + '°' + 'F' + ' Projected temperature');
 	$("#windOne").text(speed + ' MPH' + ' Projected wind speed');
@@ -101,6 +120,35 @@ function displayFutureOne (temp, speed, humidity) {
 	
 	};
 
+function displayFutureTwo (temp, speed, humidity) {
+	var convertedFutureTemp = Math.round((temp-273.15) * 9/5 + 32)
+	$("#tempTwo").text(convertedFutureTemp + '°' + 'F' + ' Projected temperature');
+	$("#windTwo").text(speed + ' MPH' + ' Projected wind speed');
+	$("#humidityTwo").text(humidity + '%' + ' Projected humidity');
+		
+	};
+
+function displayFutureThree (temp, speed, humidity) {
+	var convertedFutureTemp = Math.round((temp-273.15) * 9/5 + 32)
+	$("#tempThree").text(convertedFutureTemp + '°' + 'F' + ' Projected temperature');
+	$("#windThree").text(speed + ' MPH' + ' Projected wind speed');
+	$("#humidityThree").text(humidity + '%' + ' Projected humidity');
+			
+	};
+function displayFutureFour (temp, speed, humidity) {
+		var convertedFutureTemp = Math.round((temp-273.15) * 9/5 + 32)
+		$("#tempFour").text(convertedFutureTemp + '°' + 'F' + ' Projected temperature');
+		$("#windFour").text(speed + ' MPH' + ' Projected wind speed');
+		$("#humidityFour").text(humidity + '%' + ' Projected humidity');
+				
+	};
+function displayFutureFive (temp, speed, humidity) {
+	var convertedFutureTemp = Math.round((temp-273.15) * 9/5 + 32)
+		$("#tempFive").text(convertedFutureTemp + '°' + 'F' + ' Projected temperature');
+		$("#windFive").text(speed + ' MPH' + ' Projected wind speed');
+		$("#humidityFive").text(humidity + '%' + ' Projected humidity');
+					
+	};										
 function displayUvindex(uvi) {
 	$("#currentUvi").text(uvi + ' Current UV Index');
 
