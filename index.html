@@ -13,7 +13,8 @@
 	<header>
    	<h1>Weather Dashboard</h1>
    </header>
-	
+
+	<!-- sidebar -->
 	<main class="layout">
 		<div class="sidebar">
 			<h2>Search for a City:</h2>
@@ -23,10 +24,11 @@
 			</form>
 		</div>
 		
-
+	<!-- current weather container -->
 		<div class="content">
 			<div class="about">
 				<h2>Current Weather In:</h2>
+				<img id="currentImg"></img>
 				<div id="currentCity"></div>
 				<div id="currentDate"></div>
 				<div id="currentTemp"></div>
@@ -36,41 +38,47 @@
 			</div>
 		</div>
 		
-
+	<!-- side search history buttons -->
 		<div class="sideButtons">
 			<div class="savedSearch"></div>	
 		</div>	
-			
+		
+	<!--5 day forecast container  -->
 		<div class="content">
 			<div class="forecast">
 				<h2>5-Day Forecast:</h2>
 				<div class="clearfix">
 					<div class="cards">
 						<div id="dayOne"></div>
+						<img id="imageOne"></img>
 						<div id="tempOne"></div>
 						<div id="windOne"></div>
 						<div id="humidityOne"></div>
 					</div>
 					<div class="cards">
 						<div id="dayTwo"></div>
+						<img id="imageTwo"></img>
 						<div id="tempTwo"></div>
 						<div id="windTwo"></div>
 						<div id="humidityTwo"></div>
 					</div>
 					<div class="cards">
 						<div id="dayThree"></div>
+						<img id="imageThree"></img>
 						<div id="tempThree"></div>
 						<div id="windThree"></div>
 						<div id="humidityThree"></div>
 					</div>
 					<div class="cards">
 						<div id="dayFour"></div>
+						<img id="imageFour"></img>
 						<div id="tempFour"></div>
 						<div id="windFour"></div>
 						<div id="humidityFour"></div>
 					</div>
 					<div class="cards">
 						<div id="dayFive"></div>
+						<img id="imageFive"></img>
 						<div id="tempFive"></div>
 						<div id="windFive"></div>
 						<div id="humidityFive"></div>
@@ -78,10 +86,9 @@
 				</div>
 			</div>
 		</div>
-	
-	
 	</main>
 	
+	<!-- script links -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
 	<script src="main.js"></script>
