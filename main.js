@@ -7,7 +7,6 @@ var currentDateEl = $('#currentDate');
 // event listener
 searchBtn.on('click', getInfo);
 
-// sideBtn.on('click', displayHistory);
 
 // function to start when city is entered and search button is clicked
 function getInfo(event) {
@@ -23,16 +22,22 @@ function getInfo(event) {
 
 // function to display search buttons
 function displaySearchBtn(UserCity) {
-	sideBtn.append('<button>' + UserCity + '</button>');
+	var historyBtn = $('<button>' + UserCity + '</button>')
+	historyBtn.on('click', displayHistory);
+	sideBtn.append(historyBtn);
+	
 	
 }
 
-// still working on function for displaying search history
-// function displayHistory(UserCity) {
-// 	cityWeather(UserCity);
-// 	forecast(UserCity);
-// 
+// function for search history
 
+function displayHistory(event) {
+	console.log(event.target.innerText)
+	cityWeather(event.target.innerText);
+	forecast(event.target.innerText);
+	console.log(event.target.innerText)
+
+}
 
 // function for date and future dates
 function displayDate() {
